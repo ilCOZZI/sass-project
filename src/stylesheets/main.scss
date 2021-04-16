@@ -1,0 +1,246 @@
+
+@import 'variables';
+@import 'mixin';
+@import 'functions';
+@import 'commons';
+@import 'hero-banner';
+@import 'breakpoints';
+
+
+
+
+
+
+/********** HEADER **********/
+header {
+  background: rgba(53, 63, 111, 0.7);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  -webkit-box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+header .logo-container {
+  padding: 8px;
+}
+
+header img {
+  width: 50px;
+}
+/********* NAVIGATION *********/
+
+header {
+  nav {
+    background: $primary-color;
+    padding: 10px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    li {
+      display: inline-block;
+
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+
+header nav img {
+  width: 50px;
+}
+/********** FEATURES *********/
+.features {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.features {
+  .items {
+    display: flex;
+  }
+  .item {
+    flex: 1;
+    padding: 0 15px;
+
+    &:first-child {
+      display: flex;
+
+      .card {
+        flex: 1;
+        flex-direction: column;
+        display: flex;
+      }
+      .picture, .caption {
+        flex: 1;
+      }
+    }
+    &:nth-child(2) {
+      .card {
+        display: flex;
+      }
+      .picture {
+        flex: 1 1 25%;
+      }
+      .caption {
+        flex: 1 1 75%;
+      }
+    }
+  }
+}
+
+
+
+/********* FORM *********/
+#contact-form {
+  background-color: $primary-color;
+  background-image: url("../../src/images/world.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0;
+  color: #fff;
+}
+
+#contact-form hr {
+  @include title-line($white, 60px);
+}
+
+#contact-form .submit {
+  text-align: center;
+}
+
+#contact-form .form-group {
+  padding: 0 0 10px;
+}
+
+#contact-form input, #contact-form textarea, #contact-form select {
+  display: block;
+  width: 100%;
+  border: 1px solid  #D8D8D8;
+}
+
+#contact-form label {
+  display: block;
+  padding-bottom: 5px;
+}
+
+#contact-form input {
+  height: 40px;
+  border-radius: 3px;
+  padding: 0 15px;
+}
+
+#contact-form textarea {
+  border-radius: 3px;
+  padding: 15px;
+}
+
+#contact-form form {
+  margin: 0 -15px;
+}
+
+#contact-form .form-wrapper .message, #contact-form .form-wrapper .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 15px;
+}
+
+#contact-form .form-wrapper .message .form-group {
+  height: 100%;
+}
+
+#contact-form .form-wrapper .message textarea {
+  height: calc(100% - 23px);
+}
+
+
+footer {
+  text-align: center;
+  padding: 15px;
+
+  &.main {
+    img {
+      width: 24px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+  }
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+  .form-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav {
+    background: transparent;
+  }
+  
+}
+
+@media only screen and (min-width: 992px) {
+  
+  nav li a {
+    -webkit-transition: background .3s;
+    transition: background .3s;
+  }
+
+  nav li a {
+    &:hover {
+      background: $primary-color;
+      border-radius: 3px;
+    }
+    &:focus {
+      background: $secondary-color;
+      border-radius: 3px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header nav li a {
+    color: #fff;
+  }
+  nav {
+    margin: 0 -15px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
+
